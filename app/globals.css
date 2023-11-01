@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* BASE STYLES */
+main {
+  @apply mt-20;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* COMMON STYLES */
+.sp {
+  @apply py-20;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.eq {
+  transition: 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* TYPOGRAPHY STYLES */
+h1 {
+  @apply text-8xl font-medium;
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+p {
+  @apply text-lg;
+}
+
+small {
+  @apply text-xs font-bold tracking-widest;
+}
+
+/* SWIPER STYLES */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(0, 145, 181) !important;
+  fill: rgb(0, 145, 181) !important;
+  stroke: rgb(0, 145, 181) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(0, 145, 181) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(0, 145, 181) !important;
 }
