@@ -36,6 +36,7 @@ const Slider = () => {
               width={1920}
               height={1080}
               className='h-full w-full object-cover'
+              priority
             />
             <Overlay />
             <div className='sp container absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5 text-white'>

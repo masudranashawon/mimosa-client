@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const navContents = [
   { href: '/', label: 'Home' },
-  { href: '/beauty_packages', label: 'Beauty Packages' },
+  { href: '/beauty-packages', label: 'Beauty Packages' },
   { href: '/specialists', label: 'Specialists' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
