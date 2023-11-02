@@ -1,31 +1,32 @@
 export const data = [
   {
     image: '/assets/images/slide-image-1.jpg',
-    heading: 'Escape to Paradise - Your Journey to Total Bliss',
+    heading: 'Embark on a Journey of Ultimate Relaxation',
     subHeading:
-      'Experience the ultimate in relaxation and rejuvenation at our luxurious beauty salon and spa. Our team of experienced professionals will pamper you from head to toe with a variety of treatments designed to leave you feeling your best. Book your appointment today and escape to paradise!',
+      'Surrender to the serenity of our tranquil oasis, where every visit is an invitation to rejuvenate your body and spirit. Our devoted team of seasoned professionals is dedicated to offering you an unmatched experience with a vast array of opulent treatments. Immerse yourself in a realm of tranquility and beauty. Secure your appointment today and explore a new realm of well-being!',
   },
   {
     image: '/assets/images/slide-image-2.jpg',
-    heading: 'Discover Your Inner Beauty',
+    heading: 'Discover the Inner Beauty of Your Soul',
     subHeading:
-      "Our signature facials are designed to give you glowing, healthy skin. Our experienced estheticians will work with you to create a customized treatment that addresses your specific needs. Whether you're looking to reduce wrinkles, improve your complexion, or simply relax and de-stress, we've got you covered!",
+      'Indulge in the serenity of our tranquil oasis, where every visit is an opportunity to rejuvenate your body and soul. Our dedicated team of skilled professionals is committed to providing you with an unparalleled experience through a wide range of luxurious treatments. Come, immerse yourself in a world of relaxation and beauty. Book your appointment today and discover a new level of well-being!',
   },
   {
     image: '/assets/images/slide-image-3.jpeg',
-    heading: 'Luscious Hair Every Day',
+    heading: 'Crafting Luscious Hair Masterpieces',
     subHeading:
-      "Our hair stylists are experts in all types of hair, from curly to straight to fine to thick. We offer a wide range of services, including haircuts, coloring, styling, and treatments. Whether you're looking for a new look or simply want to keep your hair looking its best, we can help!",
+      'Step into a world of calm and luxury, where your well-being is our top priority. At our beauty salon and spa, we offer a sanctuary of relaxation and rejuvenation. Our highly trained experts will pamper you with an array of treatments that will leave you feeling refreshed and revitalized. Book your appointment now to escape the stresses of everyday life.',
   },
   {
     image: '/assets/images/slide-image-4.jpg',
-    heading: 'Get Ready for Your Big Day',
+    heading: 'Bridal Makeup Excellence and Elegance',
     subHeading:
-      'Let us help you look stunning on your wedding day with our bridal hair and makeup services. Our team will ensure that you look and feel your best.',
+      'Embark on a journey of beauty and wellness like no other. Our state-of-the-art beauty salon and spa is a haven for those seeking relaxation and transformation. Our team of experienced professionals is dedicated to enhancing your natural beauty and promoting holistic well-being. Visit us today and experience the perfect blend of luxury and rejuvenation.',
   },
   {
     image: '/assets/images/slide-image-5.jpg',
-    heading: 'Elevate Your Beauty with nature',
-    subHeading: `Step into our world of elegance, where we redefine beauty and pamper you like royalty. Our dedicated team of beauty professionals is committed to enhancing your natural beauty and boosting your confidence. Experience a personalized approach to beauty, from makeup and hair styling to nail care and skincare. When you leave our beauty parlor, you'll feel empowered and radiate self-assuredness wherever you go.`,
+    heading: 'Harmonizing Beauty with the Essence of Nature',
+    subHeading:
+      'Elevate your senses and escape to a world of bliss at our luxurious beauty salon and spa. We specialize in providing a range of treatments that cater to your specific needs, allowing you to unwind, relax, and rejuvenate. Our team of skilled therapists will take you on a journey of self-discovery and beauty. Book your appointment now and let us pamper you.',
   },
 ];
