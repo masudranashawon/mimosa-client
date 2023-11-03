@@ -29,7 +29,7 @@ const BeautyPackages: React.FC<BeautyPackagesProps> = ({ native }) => {
 
       {error && <Error error={error.message} />}
 
-      {beautyPackages && beautyPackages.length > 1 && (
+      {beautyPackages && (
         <>
           <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
             {native &&
