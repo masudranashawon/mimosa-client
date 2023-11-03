@@ -30,7 +30,7 @@ const SpecialistCard: React.FC<SpecialistCardProps> = ({ specialist }) => {
           {specialist.designation}
         </small>
         <hr className='border-gray' />
-        <p className='text-black/50'>{specialist.bio}</p>
+        <p className='text-black/50'>{specialist.bio.substring(0, 50)}...</p>
         <div className='flex justify-end'>
           <Link
             href={`/specialists/${specialist._id}`}
