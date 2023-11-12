@@ -1,8 +1,11 @@
 'use client';
 
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
+import { axiosPost } from '@/lib/axiosPost';
 import { useCallback, useState } from 'react';
+import Button from '@/components/ui/Button';
+import toast from 'react-hot-toast';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface SignInFormData {
   email: string;
@@ -14,14 +17,29 @@ const SignInForm = () => {
     email: '',
     password: '',
   });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const router = useRouter();
 
   const handleSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
+      setIsLoading(true);
+      const data = await axiosPost('/api/auth/login', formData);
 
-      console.log(formData);
+      if (data) {
+        setIsLoading(false);
+        setFormData({
+          email: '',
+          password: '',
+        });
+        toast.success('Login successfull.');
+        router.push('/');
+      } else {
+        setIsLoading(false);
+      }
     },
-    [formData]
+    [formData, router]
   );
 
   return (
@@ -47,7 +65,7 @@ const SignInForm = () => {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className='eq w-full rounded-2xl border border-gray bg-transparent p-5 outline-none focus:border-blue'
+            className='eq w-full rounded-xl border border-gray bg-transparent px-5 py-3 outline-none focus:border-blue'
           />
         </div>
 
@@ -63,11 +81,11 @@ const SignInForm = () => {
               setFormData({ ...formData, password: e.target.value })
             }
             placeholder='Write your password'
-            className='eq w-full rounded-2xl border border-gray bg-transparent p-5 outline-none focus:border-blue'
+            className='eq w-full rounded-xl border border-gray bg-transparent px-5 py-3 outline-none focus:border-blue'
           />
         </div>
 
-        <Button variant='secondary' type='submit'>
+        <Button variant='secondary' type='submit' isLoading={isLoading}>
           Login
         </Button>
 
