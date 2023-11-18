@@ -4,9 +4,11 @@ import { axiosPost } from '@/lib/axiosPost';
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { phoroUrlChecker } from '@/helpers/phoroUrlChecker';
+import { useDispatch } from 'react-redux';
 import Button from '@/components/ui/Button';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
+import { login } from '@/redux/features/auth/authSlice';
 
 interface SignUpFormData {
   name: string;
@@ -29,6 +31,7 @@ const SignUpForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const handleSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
@@ -50,6 +53,7 @@ const SignUpForm = () => {
             address: '',
             phoneNumber: '',
           });
+          dispatch(login(data));
           toast.success('Resgister successfull.');
           router.push('/');
         } else {
@@ -60,7 +64,7 @@ const SignUpForm = () => {
         toast.error('Please paste a photo url from pexels/unsplash/cloudinary');
       }
     },
-    [formData, router]
+    [formData, router, dispatch]
   );
 
   return (

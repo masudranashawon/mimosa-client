@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from 'react-hot-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ReduxProvider from '@/providers/reduxProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={cn(inter.className, 'bg-white text-black antialiased')}>
-        <Toaster />
-        <Header />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Toaster />
+          <Header />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );
