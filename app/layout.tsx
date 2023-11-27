@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Toaster } from 'react-hot-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ReduxProvider from '@/providers/reduxProvider';
+import ReduxProvider from '@/providers/ReduxProvider';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
